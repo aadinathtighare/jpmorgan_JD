@@ -1,0 +1,28 @@
+Email साठी – mail server ला point करतो. Email Mapping in Route53 → Use 
+MX Record
+----------------------------
+# cat /etc/passwd --> user account information file
+---------------
+Linux मध्ये file ownership बदलण्यासाठी chown command वापरतात.
+# sudo chown ramesh file.txt
+# sudo chown -R ramesh /var/www/project/
+-------------------
+change file permission which linux command is use
+# chmod 755 file.txt
+----------------------------
+Full Permissions # chmod 777 file.txt
+------------------------
+Multi-user with network – CLI only 
+Run Level 3
+----------------------
+vim test.sh
+how to run shell script file --> sh test.sh
+------------------------
+#!/bin/bash --> shebang line
+-----------------
+$0 shell script मध्ये खूप महत्वाचा variable आहे.
+📌 Meaning of $0
+
+➡️ $0 = चालणाऱ्या shell script चे file name / path
+➡️ म्हणजे आपण कोणता script चालवत आहोत ते सांगतो
+-----------------------------------------
