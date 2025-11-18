@@ -16,6 +16,7 @@ Multi-user with network – CLI only
 Run Level 3
 ----------------------
 vim test.sh
+chmod +x test.sh
 how to run shell script file --> sh test.sh
 ------------------------
 #!/bin/bash --> shebang line
@@ -26,3 +27,29 @@ $0 shell script मध्ये खूप महत्वाचा variable आ�
 ➡️ $0 = चालणाऱ्या shell script चे file name / path
 ➡️ म्हणजे आपण कोणता script चालवत आहोत ते सांगतो
 -----------------------------------------
+How to view the contents of a .tar file without extracting ?
+--> tar -tf filename.tar
+-t --> List / view contents
+-f --> file name 
+------------------------------------------
+Kernel version --> uname -r
+CPU info --> cat /proc/cpuinfo
+cat /proc/meminfo
+-----------------------------
+adduser
+useradd , groupadd
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
