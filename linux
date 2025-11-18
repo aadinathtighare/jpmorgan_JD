@@ -39,6 +39,20 @@ cat /proc/meminfo
 adduser
 useradd , groupadd
 ----------------------------
+lscpu
+mkfs
+mount 
+htop , free -m
+uptime
+------------
+ps -aux
+ls -al 
+ls -latr
+--------------
+webhook --> Payload URL द्या --> http://jenkins.example.com/github-webhook/ --> Jenkins → Manage Plugins → GitHub integration plugin install करा
+
+Then create Jenkins Job: Build Trigger → ✔ GitHub hook trigger for GITScm polling
+
 
 
 
