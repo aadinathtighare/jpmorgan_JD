@@ -8,3 +8,7 @@ helm install argocd argo/argo-cd -n argocd -f values.yaml
 -----------
 Q can we install prometheus via helm ?
 -----------------
+Q. can we install kafka via helm ?
+yes 
+bitnami kafka helm chart
+------------
