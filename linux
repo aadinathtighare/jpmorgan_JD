@@ -52,6 +52,26 @@ ls -latr
 webhook --> Payload URL द्या --> http://jenkins.example.com/github-webhook/ --> Jenkins → Manage Plugins → GitHub integration plugin install करा
 
 Then create Jenkins Job: Build Trigger → ✔ GitHub hook trigger for GITScm polling
+---------------------
+LINUX :
+
+how do you find a specific string in a file? grep -i "search_string" filename.txt  
+
+how do you check the permissions of a file and how do you change ownership of a file ? ls -al filename, chmod 700 filename
+--> chown john:developers script.sh  Change Owner and Group
+-----------------------------
+how do you view running processes? ps -aux, ps -ef
+Real-time Process Viewer --> top , htop
+---------------------------------------------
+
+how do you view the last 100 lines of log file ? tail -f 100 /var/log/error.log
+tail -n 100 -f filename.log --> Displays new lines in real-time as they're added to the file, Shows the last 100 lines
+
+-------------------------------
+how do you set environment variables temporarily and permanently export var= value
+
+how do you display disk usage of a directory and sort in descending order? du -sh | sort -hr 
+---------------------------------
 
 
 
