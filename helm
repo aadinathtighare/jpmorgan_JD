@@ -1,0 +1,10 @@
+Q can we install argo cd via helm?
+yes
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+kubectl create namespace argocd
+helm install argocd argo/argo-cd -n argocd
+helm install argocd argo/argo-cd -n argocd -f values.yaml
+-----------
+Q can we install prometheus via helm ?
+-----------------
