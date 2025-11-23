@@ -1,3 +1,6 @@
+kubectl get pod -o yaml 
+-o → --output, --output wide
+-------------------------------------
 Q. argo cd requires only manifest files not a application files at the end argo cd want only docker images ?
 --> Argo CD does NOT need your application source code (like HTML, Python, Java code, etc.). 
 It needs only Kubernetes manifests OR Helm charts from a Git repository.
