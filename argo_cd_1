@@ -1,4 +1,5 @@
 kubectl get pod -o yaml 
+kubectl get pods -o wide
 -o → --output, --output wide
 -------------------------------------
 Q. argo cd requires only manifest files not a application files at the end argo cd want only docker images ?
