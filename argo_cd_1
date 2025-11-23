@@ -1,5 +1,14 @@
 📦 3. Deploy the App using Helm :
 #helm install <release-name> <chart-folder>
+
+# helm rollback myapp 2 -n dev
+# helm rollback <release-name> <revision-number>
+Application revert karायचं असेल तर Helm मध्ये rollback command वापरतो.
+हा command जुना (previous) release version परत deploy करतो.
+---------------------------------------------------------------
+Q. when I upgrade the application via helm then its mandatory to do helm update ?
+--> helm upgrade --install myapp ./mychart --values values.yaml
+
 ------------------------------------------------------
 1. Create a Helm Chart:
 #helm create myapp
