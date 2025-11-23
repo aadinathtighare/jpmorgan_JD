@@ -1,0 +1,85 @@
+Q. argo cd requires only manifest files not a application files at the end argo cd want only docker images ?
+--> Argo CD does NOT need your application source code (like HTML, Python, Java code, etc.). 
+It needs only Kubernetes manifests OR Helm charts from a Git repository.
+-------------------------------------------------------
+You need CI/CD pipeline Jenkins to build & push Docker images to docker hub registry.
+--------------------------
+Argo CD requires only manifest files from Git --> Yes
+---------------
+via port forward cmd in k8s I can access that output via local host ?
+--> Yes! When you use port forwarding in Kubernetes, you can access the application via localhost on your machine.
+kubectl port-forward pod/my-pod 8080:80
+http://localhost:8080
+Port forward works only while the terminal command is running. If you close the terminal, access will stop.
+----------------------------------------------------------------------------------
+Q. ingress vs ingress controller ? we need to write only ingress.yaml file not a ingress controller yaml ?
+--> 👉 Ingress is only a configuration (rules)
+👉 Ingress Controller is the tool that applies those rules
+
+Without an ingress controller, your ingress file will not work ❌
+-------------------------------------------------------------------------------------------
+Self-managed K8s cluster --> You install NGINX Ingress Controller via helm 
+helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace
+kind: Ingress ( networking ) routing rules
+--------------------------------
+Q. if I m using application load balancer with ingress controller so how to install ingress contoller
+--> install AWS ALB Ingress Controller 
+ALB Ingress Controller (AWS Load Balancer Controller) Installation on EKS :
+Step 1: Install IAM Policy Create IAM policy
+Step 2: Create IAM Role for EKS Service Account
+Step 3: Install CRDs for the ALB Ingress Controller --> Custom Resource Definition (CRD)
+Install via Helm --> helm install aws-load-balancer-controller eks/aws-load-balancer-controller
+Annotation: kubernetes.io/ingress.class: alb
+--------------------------------------------------
+🎯 Final Summary
+✔ If using Application Load Balancer + Ingress, you MUST install AWS Load Balancer Controller
+✔ It creates ALB automatically using ingress rules
+✔ You only write ingress.yaml, NOT controller YAML
+-----------------------------------------------------------------
+Q. in argocd kind : application there is source and destination what is that ?
+🔹 source → Where your Kubernetes manifests/Helm charts are stored --> git repo 
+Git repository with Kubernetes files (deployment, service, ingress etc.)
+ArgoCD reads this and deploys it.
+🔹 destination → Where your application will be deployed (which cluster + namespace) --> eks cluster
+--------------------------------------------------
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp
+  namespace: argocd
+spec:
+  source:
+    repoURL: https://github.com/ramesh/myapp-manifests.git
+    targetRevision: main     # branch name
+    path: k8s/               # folder where YAML files are stored
+
+  destination:
+    server: https://kubernetes.default.svc   # EKS / Local cluster
+    namespace: myapp-namespace
+
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
