@@ -1,3 +1,15 @@
+📦 3. Deploy the App using Helm :
+#helm install <release-name> <chart-folder>
+------------------------------------------------------
+1. Create a Helm Chart:
+#helm create myapp
+2. Edit values.yaml
+3. Deploy the App using Helm
+# helm install myapp-release myapp/
+4. Upgrade App (When You Change YAML)
+# helm upgrade myapp-release myapp/
+
+-----------------------------------
 kubectl get pod -o yaml 
 kubectl get pods -o wide
 -o → --output, --output wide
