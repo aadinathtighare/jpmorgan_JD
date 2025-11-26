@@ -1,0 +1,46 @@
+
+Linux & Shell Scripting
+ 1. Why should you avoid introducing yourself with “Myself…” in an interview?
+ 2. How do you print the current date and time in a shell script?
+ 3. How can you view the contents of a ZIP file without extracting it?
+ 4. What does the Linux permission code 755 represent?
+ 5. Which command is used to change directory/file permissions?
+ 6. Which command is used to create a new user in Linux?
+ 7. How do you check all active network ports on a Linux machine?
+ 8. Linux is CLI based — which shell type does it commonly use?
+ 9. Where should environment variables be stored in Linux?
+
+⸻
+
+Networking & Protocols
+ 10. What is SMTP, its uses, and its types?
+ 11. DNS uses which protocols — TCP, UDP, or HTTPS?
+ 12. What are common HTTPS API methods?
+
+⸻
+
+Logging, Monitoring & Kubernetes
+ 13. What are the main components of the ELK Stack?
+ 14. What is the use of Helm in Kubernetes?
+ 15. What is Docker?
+
+⸻
+
+AWS Cloud
+ 16. What is the difference between an ALB and NLB?
+ 17. What is Route 53 and why do we use it?
+ 18. What is a Target Group in AWS?
+ 19. Difference between GP2 and GP3 EBS volumes?
+ 20. What are T-Series EC2 instances and why are they used?
+ 21. What is EFS, how do you mount it, and why is it used?
+ 22. What is an Internet Gateway (IGW)?
+ 23. How do we restrict access from a specific IP/location?
+ 24. Difference between Security Group and NACL?
+
+⸻
+
+CI/CD, DevOps & Terraform
+ 25. What are the main stages in a CI/CD pipeline?
+ 26. What is Terraform and how do you use it?
+ 27. How do you recover an EC2 instance if the key pair is lost?
+ 28. What is Jenkins, how does it work, and what are the main stages in a pipeline?
